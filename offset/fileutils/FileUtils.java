@@ -35,7 +35,7 @@ public class FileUtils {
 		
 }
 	public boolean checkIfFileContainsContent(File f) {
-	double fileSize = f.length();
+	var fileSize = f.length();
 	
 	if(fileSize != 0) {
 		return true;
@@ -55,7 +55,7 @@ public class FileUtils {
 	}
 	public void downloadFileFromURL(String urlLink, File fileDestination) {    
         try {
-            URL website = new URL(urlLink);
+          var website = new URL(urlLink);
             ReadableByteChannel readableBytes;
             readableBytes = Channels.newChannel(website.openStream());
             FileOutputStream fileOutput = new FileOutputStream(fileDestination);
